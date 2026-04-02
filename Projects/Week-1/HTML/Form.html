@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/form.css"/>
+    <title>Form Example</title>
+</head>
+<body>
+    <header>
+        <h1>Submission Form</h1>
+    </header>
+
+        <main>
+           
+
+            <section>
+
+                <form>
+                    <label for="firstname">First Name:
+                        <input id="firstname" type="text" placeholder="Enter your first name..." required/>
+                    </label>
+                
+                    <label for="lastname">Last Name:
+                        <input id="lastname" type="text" placeholder="Enter your last name..."/>
+                    </label>
+        
+                    <label for="title">Salutation:
+                        <select id="title" name="salutation">
+                            <option value="mr">Mr</option>
+                            <option value="ms">Ms</option>
+                            <option value="mrs">Mrs</option>
+                            <option value="miss">Miss</option>
+                            <option value="dr">Dr</option>
+                            <option value="sir">Sir</option>
+                        </select>
+                        </label>
+                    
+        
+                    <label for="email">Email:
+                        <input id="email" type="email" placeholder="Enter your emailId..." required/>
+                    </label>
+                    <label for="comments"> Your Comments
+                        <textarea id="comments" type="text" placeholder="Enter your comments here...">
+                            </textarea>
+        
+                    </label>
+        
+                    <input type="submit" class="btn"></input>
+                </form>
+            </section>
+
+             <section>
+                <table>
+                    <caption>
+                        Available Products
+                    </caption>
+                    <thead>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>In Stock</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Product 1</td>
+                            <td>$300</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>Product 2</td>
+                            <td>$400</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>Product 3</td>
+                            <td>$500</td>
+                            <td>300</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+        
+
+    </main>
+    
+</body>
+</html>

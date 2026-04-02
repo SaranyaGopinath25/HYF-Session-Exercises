@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Blank page" />
+    <title>Blank Page</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Responsive styles: mobile-first, tablet and desktop breakpoints -->
+    <style>
+        :root{
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            --gap: 1rem;
+
+            /* default (mobile) colors */
+            --bg-color: #ffffff;
+            --text-color: #222222;
+            --heading-color: #1565c0;
+            --muted-color: #444444;
+            --item-color: #1e88e5;
+        }
+
+        /* Base / Mobile */
+        html, body { height: 100%; }
+        body{
+            margin:0;
+            font-family:var(--font-sans);
+            background:var(--bg-color);
+            color:var(--text-color);
+            padding:1rem;
+            -webkit-font-smoothing:antialiased;
+        }
+
+        main{
+            max-width:900px;
+            margin:0 auto;
+        }
+
+        h1{
+            margin:0 0 .5rem 0;
+            font-size:1.6rem;
+            color:var(--heading-color);
+            line-height:1.1;
+        }
+
+        p{
+            margin:0 0 1rem 0;
+            font-size:1rem;
+            color:var(--muted-color);
+        }
+
+        ol{
+            padding-left:1.25rem;
+            margin:0;
+        }
+
+        .food-item{
+            color:var(--item-color);
+            font-weight:700;
+            font-size:1rem;
+            margin:0.25rem 0;
+        }
+
+        /* Tablet: change palette, layout and background */
+        @media (min-width: 768px){
+            /* tablet colors */
+            :root{
+                --bg-color: #e8f5e9;      /* light green bg on tablet */
+                --heading-color: #2e7d32;  /* green */
+                --muted-color: #385a36;
+                --item-color: #43a047;     /* green list items */
+            }
+
+            body{padding:1.5rem;}
+            main{
+                display:grid;
+                grid-template-columns: 1fr 280px;
+                gap:var(--gap);
+                align-items:start;
+            }
+
+            h1{ font-size:2rem; }
+            p{ font-size:1.05rem; }
+            .food-item{ font-size:1.05rem; }
+        }
+
+        /* Desktop: different palette and sizing */
+        @media (min-width: 1024px){
+            /* desktop colors */
+            :root{
+                --heading-color: #8b1e3f;  /* maroon */
+                --muted-color: #4b2b33;
+                --item-color: #b71c1c;     /* red list items */
+            }
+
+            body{padding:2rem;}
+            main{
+                max-width:1200px;
+                grid-template-columns: 1fr 340px;
+            }
+
+            h1{ font-size:2.5rem; }
+            p{ font-size:1.1rem; }
+            .food-item{ font-size:1.1rem; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Start building here -->
+        <h1>Saranya</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis non quibusdam atque voluptatem id dolorem, repellat illum minus recusandae ab!</p>
+        <ol>
+            <li class="food-item">Pizza</li>
+            <li class="food-item">Pasta</li>
+            <li class="food-item">Burger</li>
+        </ol>
+    </main>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

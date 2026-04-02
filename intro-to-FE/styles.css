@@ -1,0 +1,21 @@
+
+
+#dynamic-image {
+    width: 200px;
+    height: auto;
+    border: 2px solid #000;
+    position: absolute;
+    top: 0;
+    left: -100;
+
+}
+
+.animateToRight {
+    animation: slideToRight 1s forwards;
+}
+
+@keyframes slideToRight{
+    from {left: -100;}
+    to {right: 0;}
+}
+

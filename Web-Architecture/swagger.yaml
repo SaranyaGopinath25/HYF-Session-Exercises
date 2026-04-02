@@ -1,0 +1,133 @@
+openapi: 3.0.0
+info:
+  title: Task Management API
+  version: 1.0.0
+  description: API for managing tasks
+
+servers:
+  - url: /api/v1/project1/
+
+paths:
+  /tasks:
+    get:
+      summary: Get all tasks
+      responses:
+        '200':
+          description: A list of tasks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+
+  /task/{task_id}:
+    get:
+      summary: Get a specific task
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: A task object
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+
+    put:
+      summary: Update a task
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Task'
+      responses:
+        '200':
+          description: Updated task object
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+
+    delete:
+      summary: Delete a task
+      parameters:
+        - name: task_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Remaining tasks after deletion
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+
+  /createTask:
+    post:
+      summary: Create a new task
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Task'
+      responses:
+        '200':
+          description: Created task
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Task'
+
+components:
+  schemas:
+    Task:
+      type: object
+      properties:
+        task_id:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        status_id:
+          type: integer
+        user_id:
+          type: integer
+        status:
+          type: string
+        created:
+          type: string
+          format: date-time
+        updated:
+          type: string
+          format: date-time
+        due_date:
+          type: string
+          format: date-time
