@@ -182,3 +182,12 @@
     border-right-color: var(--border);
   }
 }
+
+.btn{
+  width : 200px;
+  height: 100px;
+  background-color: green;
+
+}
+
+
