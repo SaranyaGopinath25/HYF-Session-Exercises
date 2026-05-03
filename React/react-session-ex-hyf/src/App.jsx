@@ -7,6 +7,10 @@ import ToggleContent from "./components/Toggle/ToggleContent.jsx";
 import Counter from "./components/Counter/Counter.jsx";
 import Form from "./components/Form/Form.jsx";
 import Parent from "./components/ParentChild/Parent.jsx";
+import ClickCounter from "./components/ClickCounter/ClickCounter.jsx";
+import TodoForm from "./components/ToDoForm/TodoForm.jsx";
+import Clock from "./components/Clock/Clock.jsx";
+import WindowResize from "./components/Window/WindowResize.jsx";
 
 function App() {
   const btnText = "Click Me!";
@@ -51,6 +55,17 @@ function App() {
       <Form />
 
       <Parent />
+
+      <h1>Click Counter</h1>
+
+  <ClickCounter />
+
+  <TodoForm />
+
+  <Clock />
+
+  <WindowResize />
+
     </>
   );
 }
